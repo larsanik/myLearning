@@ -1,22 +1,22 @@
+# import turtle
+#
+# slowpoke = turtle.Turtle()
+# slowpoke.shape('turtle')
+#
+# slowpoke.forward(100)
+# slowpoke.right(90)
+# slowpoke.forward(100)
+# slowpoke.right(90)
+# slowpoke.forward(100)
+# slowpoke.right(90)
+# slowpoke.forward(100)
+# slowpoke.right(90)
+#
+# turtle.mainloop()
+
 import turtle
 
-slowpoke = turtle.Turtle()
-slowpoke.shape('turtle')
-
-slowpoke.forward(100)
-slowpoke.right(90)
-slowpoke.forward(100)
-slowpoke.right(90)
-slowpoke.forward(100)
-slowpoke.right(90)
-slowpoke.forward(100)
-slowpoke.right(90)
-
-turtle.mainloop()
-
-# import turtle
-
-# help(turtle.Turtle)
+help(turtle.Turtle)
 # slowpoke = turtle.Turtle()
 # slowpoke.shape('turtle')
 # slowpoke.color('blue')
