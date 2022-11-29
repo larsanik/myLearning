@@ -42,4 +42,5 @@ def race():
 
 
 setup()
+race()
 turtle.mainloop()
