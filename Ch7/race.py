@@ -21,7 +21,7 @@ def setup():
     turtle_color = ['blue', 'red', 'purple', 'brown', 'green']
 
     for i in range(0, len(turtle_ycor)):
-        if i == 1:
+        if i == 10:
             new_turtle = SuperTurtle()
         else:
             new_turtle = turtle.Turtle()
