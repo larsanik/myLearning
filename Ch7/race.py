@@ -4,6 +4,12 @@ import random
 turtles = list()
 
 
+class SuperTurtle(turtle.Turtle):
+    def forward(self, distance):
+        cheat_distance = distance + 5
+        turtle.Turtle.forward(self, cheat_distance)
+
+
 def setup():
     global turtles
     startline = -620
@@ -15,7 +21,11 @@ def setup():
     turtle_color = ['blue', 'red', 'purple', 'brown', 'green']
 
     for i in range(0, len(turtle_ycor)):
-        new_turtle = turtle.Turtle()
+        if i == 1:
+            new_turtle = SuperTurtle()
+        else:
+            new_turtle = turtle.Turtle()
+        #new_turtle = turtle.Turtle()
         new_turtle.shape('turtle')
         new_turtle.penup()
         new_turtle.setpos(startline, turtle_ycor[i])
