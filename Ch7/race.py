@@ -25,7 +25,6 @@ def setup():
             new_turtle = SuperTurtle()
         else:
             new_turtle = turtle.Turtle()
-        #new_turtle = turtle.Turtle()
         new_turtle.shape('turtle')
         new_turtle.penup()
         new_turtle.setpos(startline, turtle_ycor[i])
