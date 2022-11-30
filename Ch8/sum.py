@@ -35,6 +35,6 @@ def is_polindrom(word):
 # sums = recursive_compute_sum(marbles)
 # print('Сумма равна', sums)
 
-wrd = 'tacocat'
+wrd = 's'
 print(check_polindrom(wrd))
 print(is_polindrom(wrd))
