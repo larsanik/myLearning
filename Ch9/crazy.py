@@ -15,14 +15,16 @@ placeholders = ['ГЛАГОЛ', 'СУЩЕСТВИТЕЛЬНОЕ', 'ПРИЛАГ�
 
 
 def process_line(line):
+    global placeholders
     processed_line = ''
-
     words = line.split()
-
     for word in words:
-        if word in placeholders:
+        stripped = word.strip('.,;?!')
+        if stripped in placeholders:
             answer = input('Введите ' + word + ": ")
-            processed_line = processed_line + answer + ' '
+            processed_line = processed_line + answer
+            if word[-1] in '.,;?!':
+                processed_line = processed_line + word[-1] + ' '
         else:
             processed_line = processed_line + word + ' '
     return processed_line + '\n'
