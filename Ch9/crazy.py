@@ -22,7 +22,7 @@ def process_line(line):
         stripped = word.strip('.,;?!')
         if stripped in placeholders:
             answer = input('Введите ' + word + ": ")
-            processed_line = processed_line + answer
+            processed_line = processed_line + answer + ' '
             if word[-1] in '.,;?!':
                 processed_line = processed_line + word[-1] + ' '
         else:
@@ -31,7 +31,7 @@ def process_line(line):
 
 
 def main():
-    lib = make_crazy_lib('lib.txt')
+    lib = make_crazy_lib('lib2.txt')
     print(lib)
 
 
