@@ -1,14 +1,22 @@
 def make_crazy_lib(filename):
-    file = open(filename, 'r', encoding="utf-8")
+    try:
+        file = open(filename, 'r', encoding="utf-8")
 
-    text = ''
+        text = ''
 
-    for line in file:
-        text = text + process_line(line)  # + '\n'
+        for line in file:
+            text = text + process_line(line)  # + '\n'
 
-    file.close()
+        file.close()
 
-    return text
+        return text
+
+    except FileNotFoundError:
+        print("Not found file", filename + '.')
+    except IsDirectoryError:
+        print("Well", filename, '- this directory.')
+    except:
+        print("Not read file", filename)
 
 
 placeholders = ['ГЛАГОЛ', 'СУЩЕСТВИТЕЛЬНОЕ', 'ПРИЛАГАТЕЛЬНОЕ']
@@ -30,9 +38,18 @@ def process_line(line):
     return processed_line + '\n'
 
 
+def save_crazy_lib(filename, text):
+    file = open(filename, "w")
+
+    file.write(text)
+    file.close()
+
+
 def main():
-    lib = make_crazy_lib('lib2.txt')
-    print(lib)
+    filename = 'lib.txt'
+    lib = make_crazy_lib(filename)
+    if lib is not None:
+        save_crazy_lib('crazy_' + filename, lib)
 
 
 if __name__ == '__main__':
