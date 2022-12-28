@@ -1,3 +1,5 @@
+import sys
+
 def make_crazy_lib(filename):
     try:
         file = open(filename, 'r', encoding="utf-8")
@@ -46,10 +48,13 @@ def save_crazy_lib(filename, text):
 
 
 def main():
-    filename = 'lib.txt'
-    lib = make_crazy_lib(filename)
-    if lib is not None:
-        save_crazy_lib('crazy_' + filename, lib)
+    if len(sys.argv) != 2:
+        print ("crazy.py <file_name>")
+    else:
+        filename = sys.argv[1]
+        lib = make_crazy_lib(filename)
+        if lib is not None:
+            save_crazy_lib('crazy_' + filename, lib)
 
 
 if __name__ == '__main__':
