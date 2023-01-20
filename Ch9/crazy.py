@@ -1,6 +1,5 @@
 import sys
 
-
 def make_crazy_lib(filename):
     try:
         file = open(filename, 'r', encoding="utf-8")
@@ -16,7 +15,7 @@ def make_crazy_lib(filename):
 
     except FileNotFoundError:
         print("Not found file", filename + '.')
-    except IsADirectoryError:
+    except IsDirectoryError:
         print("Well", filename, '- this directory.')
     except:
         print("Not read file", filename)
@@ -50,7 +49,7 @@ def save_crazy_lib(filename, text):
 
 def main():
     if len(sys.argv) != 2:
-        print("crazy.py <file_name>")
+        print ("crazy.py <file_name>")
     else:
         filename = sys.argv[1]
         lib = make_crazy_lib(filename)
