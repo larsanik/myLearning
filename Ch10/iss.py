@@ -5,6 +5,7 @@ import turtle
 
 def move_iss(lat, long):
     global iss
+
     iss.penup()
     iss.goto(long, lat)
     iss.pendown()
@@ -30,7 +31,8 @@ if response.status_code == 200:
     # print('Координаты МКС: ' +
     #       position['latitude'] + ', ' + position['longitude'])
     lat = float(position['latitude'])
-    long = position['longitude']
+    long = float(position['longitude'])
+    print(lat, long)
     move_iss(lat, long)
 else:
     print("Хьюстон, у нас проблема:", response.status_code)
