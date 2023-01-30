@@ -31,12 +31,11 @@ def track_iss():
         position = response_dictionary['iss_position']
         lat = float(position['latitude'])
         long = float(position['longitude'])
-        print(lat, long)
         move_iss(lat, long)
     else:
         print("Хьюстон, у нас проблема:", response.status_code)
     widget = turtle.getcanvas()
-    widget.after(5000, track_iss)
+    widget.after(1000, track_iss)
 
 def main():
     global iss
