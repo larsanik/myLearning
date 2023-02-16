@@ -20,6 +20,8 @@ def next_gen():
         for j in range(0, widht):
             cell = 0
             if gird_model [i][j] == 0:
+                count = count_neighbors(gird_model, i, j)
+
 
 
 def count_neighbors(grid, row, col):
